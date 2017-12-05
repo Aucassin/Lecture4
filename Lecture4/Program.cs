@@ -23,18 +23,18 @@ namespace Lecture4
             //    Console.WriteLine();
             Console.WriteLine("Enter a secret number");
             int a = int.Parse(Console.ReadLine());
-            int b = (a % 10);
-            int c = (a % 100);
-            int d %
+            int b = a / 100;
+            int c = (a % 100 - a % 10) / 10;
+            int d = a % 10;
 
-
+            Console.WriteLine($"{b} {c} {d}");
             Console.WriteLine("Guess the number:");
-            int d = int.Parse(Console.ReadLine());
-            if (d == a)
+            int e = int.Parse(Console.ReadLine());
+            if (e == b)
                 Console.WriteLine("Correct");
-            else if (d == b)
+            else if (e == c)
                 Console.WriteLine("Correct");
-            else if (d == c)
+            else if (e == d)
                 Console.WriteLine("Correct");
             else
                 Console.WriteLine("You failed");
